@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "Coursework1"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.tpp": "cpp"
+		},
+		"terminal.integrated.shell.windows": "cmd.exe"
+	}
+}
