@@ -100,7 +100,7 @@ void Person::findOldest() {
 		}
 	}
 
-	cout << personList[oldest].name << " " << personList[oldest].age << endl;
+	cout << "Oldest: " << personList[oldest].name << " " << personList[oldest].age << endl;
 }
 
 void Person::addPersonByVector() {
@@ -152,7 +152,7 @@ void Person::findOldestByVector() {
 		count++;
 	}
 
-	cout << people.at(oldest).name << " " << people.at(oldest).age << endl;
+	cout << "Oldest: " << people.at(oldest).name << " " << people.at(oldest).age << endl;
 }
 
 void Person::sortDataByVector() {
