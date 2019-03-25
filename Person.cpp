@@ -93,14 +93,16 @@ void Person::removePerson() {
 
 void Person::findOldest() {
 	int oldest = 0;
+	int oldestIndex = 0;
 
 	for (int i = 0; i < personNum; i++) {
 		if (personList[i].age > oldest) {
-			oldest = i;
+			oldest = personList[i].age;
+			oldestIndex = i;
 		}
 	}
 
-	cout << "Oldest: " << personList[oldest].name << " " << personList[oldest].age << endl;
+	cout << "Oldest: " << personList[oldestIndex].name << " " << personList[oldestIndex].age << endl;
 }
 
 void Person::addPersonByVector() {
@@ -142,17 +144,19 @@ void Person::removePersonByVector() {
 
 void Person::findOldestByVector() {
 	int oldest = 0;
+	int oldestIndex = 0;
 	int count = 0;
 	vector<Person>::iterator i;
 
 	for (i = people.begin(); i != people.end(); i++) {
 		if ((*i).age > oldest) {
-			oldest = count;
+			oldest = (*i).age;
+			oldestIndex = count;
 		}
 		count++;
 	}
 
-	cout << "Oldest: " << people.at(oldest).name << " " << people.at(oldest).age << endl;
+	cout << "Oldest: " << people.at(oldestIndex).name << " " << people.at(oldestIndex).age << endl;
 }
 
 void Person::sortDataByVector() {
