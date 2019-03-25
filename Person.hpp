@@ -44,7 +44,6 @@ class Person {
 		void findOldestByVector();
 		// Sort data
 		void sortDataByVector();
-		bool sortByAge(const Person &p1, const Person &p2);
 };
 
 #endif
