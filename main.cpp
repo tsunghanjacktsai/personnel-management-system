@@ -15,10 +15,12 @@ using namespace std;
 
 void main_part1() {
 	// Treat this as the main method for PART 1 of the coursework
+
+	// Test the operators which have been overloaded
 	Person p1, p2, p3;
-	cin >> p1 >> p2 >> p3;
+	cin >> p1 >> p2 >> p3; // Input
 	cout << "---------" << endl;
-	cout << (p1 < p2) << endl << (p1 > p2) << endl << (p1 == p3) << endl;
+	cout << (p1 < p2) << endl << (p1 > p2) << endl << (p1 == p3) << endl; // Output the result
 }
 
 void main_part2() {
@@ -26,6 +28,7 @@ void main_part2() {
 	char input;
 	Person p;
 
+	// The main loop for user operation
 	do {
 		cout << "1. Add Person" << endl;
 		cout << "2. List Everyone" << endl;
@@ -33,7 +36,9 @@ void main_part2() {
 		cout << "4. Find Oldest" << endl;
 		cout << "Q. Quit" << endl;
 		cout << "Enter Option: ";
-		cin >> input;
+
+		cin >> input; // Input
+
 		switch (input) {
 			case '1': p.addPerson(); break;
 			case '2': p.listEveryone(); break;
@@ -51,6 +56,7 @@ void main_part3() {
 	char input;
 	Person p;
 
+	// The main loop for user operation
 	do {
 		cout << "1. Add Person" << endl;
 		cout << "2. List Everyone" << endl;
@@ -59,7 +65,9 @@ void main_part3() {
 		cout << "5. Sort Data" << endl;
 		cout << "Q. Quit" << endl;
 		cout << "Enter Option: ";
-		cin >> input;
+
+		cin >> input; // Input
+
 		switch (input) {
 		case '1': p.addPersonByVector(); break;
 		case '2': p.listEveryoneByVector(); break;

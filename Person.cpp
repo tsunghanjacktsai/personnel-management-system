@@ -13,22 +13,27 @@ vector<Person> people;
 Person p;
 int personNum;
 
+// PART 1
+
+// The constructor to take appropriate parameters and stores them in the object
 Person::Person(string n, int a) {
 	name = n;
 	age = a;
 }
 
+// Default constructor
 Person::Person() {
 	name = "";
 	age = 0;
 }
 
-// Overloaded IO operators
+// Overloaded the output stream operator <<
 ostream & operator<<(ostream& output, const Person& p) {
 	output << p.name << " " << p.age << endl;
 	return output;
 }
 
+// Overloaded the input stream operator >>
 istream & operator>>(istream& input, Person& p) {
 	input >> p.name >> p.age;
 	return input;
@@ -49,6 +54,9 @@ bool Person::operator==(const Person& p) {
 	return this->age == p.age;
 }
 
+// PART 2
+
+// Add person into the array
 void Person::addPerson() {
 	cout << "Enter Details: ";
 	cin >> p;
@@ -60,6 +68,7 @@ void Person::addPerson() {
 	}
 }
 
+// List everyone inside the array
 void Person::listEveryone() {
 	for (int i = 0; i < personNum; i++) {
 		cout << "[" << i + 1 << "] ";
@@ -67,6 +76,8 @@ void Person::listEveryone() {
 	}
 }
 
+
+// Remove person inside the array
 void Person::removePerson() {
 	int indexToDelete;
 	
@@ -91,6 +102,7 @@ void Person::removePerson() {
 
 }
 
+// Find the person with the oldest age inside the array
 void Person::findOldest() {
 	int oldest = 0;
 	int oldestIndex = 0;
@@ -105,6 +117,9 @@ void Person::findOldest() {
 	cout << "Oldest: " << personList[oldestIndex].name << " " << personList[oldestIndex].age << endl;
 }
 
+// PART 3
+
+// Add person into the vector
 void Person::addPersonByVector() {
 	cout << "Enter Details: ";
 	cin >> p;
@@ -112,6 +127,8 @@ void Person::addPersonByVector() {
 	people.push_back(p);
 }
 
+
+// List everyone inside the vector
 void Person::listEveryoneByVector() {
 	int count = 1;
 	vector<Person>::iterator i;
@@ -122,6 +139,8 @@ void Person::listEveryoneByVector() {
 ;	}
 }
 
+
+// Remove person inside the vector
 void Person::removePersonByVector() {
 	int indexToDelete;
 
@@ -142,6 +161,8 @@ void Person::removePersonByVector() {
 	}
 }
 
+
+// Find the person with the oldest age inside the vector
 void Person::findOldestByVector() {
 	int oldest = 0;
 	int oldestIndex = 0;
@@ -159,6 +180,7 @@ void Person::findOldestByVector() {
 	cout << "Oldest: " << people.at(oldestIndex).name << " " << people.at(oldestIndex).age << endl;
 }
 
+// Sort the data by the age of people inside the vector
 void Person::sortDataByVector() {
 	sort(people.begin(), people.end());
 }
